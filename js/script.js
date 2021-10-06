@@ -72,17 +72,3 @@ L.marker([53.290192, 6.366372])
 L.marker([53.398758, 6.454925])
     .addTo(map)
     .bindPopup("<img class=\"popup\" src=\"assets/imgs/IMG_1174.JPG\"/>");
-
-
-// ------ dev -------
-
-var popup = L.popup();
-
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent("You clicked the map at " + e.latlng.toString())
-        .openOn(map);
-}
-
-map.on('click', onMapClick);
