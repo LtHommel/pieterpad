@@ -51,7 +51,8 @@ new L.GPX('assets/gpx/pieterpad.gpx', {
     async: true,
     marker_options: {
         startIconUrl: false,
-        endIconUrl: false,
+        endIconUrl: 'assets/imgs/icons8-signpost-48.png',
+        wptIconUrls: {'': 'assets/imgs/icons8-signpost-48.png'},
         shadowUrl: false
     }
 }).on('loaded', function (e) {
@@ -59,16 +60,28 @@ new L.GPX('assets/gpx/pieterpad.gpx', {
     map.fitBounds(e.target.getBounds());
 }).addTo(map);
 
+
 // ----- IMGs -----
 
-L.marker([53.393719, 6.359244])
+var photoIcon = L.icon({
+  iconUrl: 'assets/imgs/icons8-camera-48.png',
+  shadowUrl: false,
+
+  iconSize:     [16, 16], // size of the icon
+  shadowSize:   [0, 0], // size of the shadow
+  iconAnchor:   [8, 8], // point of the icon which will correspond to marker's location
+  shadowAnchor: [0, 0],  // the same for the shadow
+  popupAnchor:  [0, -4] // point from which the popup should open relative to the iconAnchor
+});
+
+L.marker([53.393719, 6.359244], {icon: photoIcon})
     .addTo(map)
     .bindPopup("<img class=\"popup\" src=\"assets/imgs/IMG_1152.JPG\"/>");
 
-L.marker([53.290192, 6.366372])
+L.marker([53.290192, 6.366372], {icon: photoIcon})
     .addTo(map)
     .bindPopup("<img class=\"popup\" src=\"assets/imgs/IMG_1145.JPG\"/>");
 
-L.marker([53.398758, 6.454925])
+L.marker([53.398758, 6.454925], {icon: photoIcon})
     .addTo(map)
     .bindPopup("<img class=\"popup\" src=\"assets/imgs/IMG_1174.JPG\"/>");

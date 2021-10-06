@@ -12,6 +12,88 @@
         minlon="5.681769037619233" />
 </metadata>
 
+<wpt lat="53.400027276948094" lon="6.453164219856262" > 
+  <name>Pieterburen - Start</name>
+</wpt>
+<wpt lat="53.332080719992518" lon="6.514517068862915" >
+  <name>Winsum</name>
+</wpt>
+<wpt lat="53.211641991510987" lon="6.564856767654419" >
+  <name>Groningen</name>
+</wpt>
+<wpt lat="53.094088481739163" lon="6.687101125717163" >
+  <name>Zuidlaren</name>
+</wpt>
+<wpt lat="52.990391012281179" lon="6.648498773574829" >
+  <name>Rolde</name>
+</wpt>
+<wpt lat="52.905414439737797" lon="6.699782609939575" >
+  <name>Schoonloo</name>
+</wpt>
+<wpt lat="52.775679510086775" lon="6.801996231079102" >
+  <name>Sleen</name>
+</wpt>
+<wpt lat="52.66310803592205" lon="6.736439019441605" >
+  <name>Coevorden</name>
+</wpt>
+<wpt lat="52.576242433860898" lon="6.617889404296875" >
+  <name>Hardenberg</name>
+</wpt>
+<wpt lat="52.516481978818774" lon="6.423209309577942" >
+  <name>Ommen</name>
+</wpt>
+<wpt lat="52.388991387560964" lon="6.448631286621094" >
+  <name>Hellendoorn</name>
+</wpt>
+<wpt lat="52.284063203260303" lon="6.421353220939636" >
+  <name>Holten</name>
+</wpt>
+<wpt lat="52.192202908918262" lon="6.366180181503296" >
+  <name>Laren</name>
+</wpt>
+<wpt lat="52.101928470656276" lon="6.320738196372986" >
+  <name>Vorden</name>
+</wpt>
+<wpt lat="52.006937367841601" lon="6.349968910217285" >
+  <name>Zelhem</name>
+</wpt>
+<wpt lat="51.923857368528843" lon="6.266648769378662" >
+  <name>Braamt</name>
+</wpt>
+<wpt lat="51.863765325397253" lon="6.047276258468628" >
+  <name>Millingen</name>
+</wpt>
+<wpt lat="51.778073022142053" lon="5.933063942939043" >
+  <name>Groesbeek</name>
+</wpt>
+<wpt lat="51.701815640553832" lon="5.968769090250135" >
+  <name>Gennep</name>
+</wpt>
+<wpt lat="51.596485208719969" lon="6.010849345475435" >
+  <name>Vierlingsbeek</name>
+</wpt>
+<wpt lat="51.490849675610662" lon="6.11538290977478" >
+  <name>Swolgen</name>
+</wpt>
+<wpt lat="51.365705179050565" lon="6.17232620716095" >
+  <name>Venlo</name>
+</wpt>
+<wpt lat="51.231266660615802" lon="6.035721302032471" >
+  <name>Swalmen</name>
+</wpt>
+<wpt lat="51.126805180683732" lon="5.947149395942688" >
+  <name>Montfort</name>
+</wpt>
+<wpt lat="50.998068703338504" lon="5.870663523674011" >
+  <name>Sittard</name>
+</wpt>
+<wpt lat="50.871481765061617" lon="5.814002612605691" >
+  <name>Strabeek</name>
+</wpt>
+<wpt lat="50.836622016504407" lon="5.685646003112197" >
+  <name>Sint Pietersberg - Finish</name>
+</wpt>
+
 <trk>
     <name>Pieterpad</name>
     <trkseg> <!-- Pieterburen - Winsum-->
@@ -305,6 +387,7 @@
     </trkseg>
     <trkseg> <!-- Winsum - Groningen -->
       <name>Winsum - Groningen</name>
+      <number>1</number>
       <trkpt lat="53.332080719992518" lon="6.514517068862915" />
       <trkpt lat="53.332231007516384" lon="6.514567025005817" />
       <trkpt lat="53.332231007516384" lon="6.514567025005817" />
