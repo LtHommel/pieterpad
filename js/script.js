@@ -34,18 +34,30 @@ const gpxs = [
     'assets/gpx/etappes/26_strabeek_maastricht.gpx'
 ]
 
-gpxs.forEach(gpx => {
-    new L.GPX(gpx, {
-        async: true,
-        marker_options: {
-            startIconUrl: false,
-            endIconUrl: false,
-            shadowUrl: false
-        }
-    // }).on('loaded', function (e) {
-    //     map.fitBounds(e.target.getBounds());
-    }).addTo(map);
-});
+// gpxs.forEach(gpx => {
+//     new L.GPX(gpx, {
+//         async: true,
+//         marker_options: {
+//             startIconUrl: false,
+//             endIconUrl: false,
+//             shadowUrl: false
+//         }
+//     // }).on('loaded', function (e) {
+//     //     map.fitBounds(e.target.getBounds());
+//     }).addTo(map);
+// });
+
+new L.GPX('assets/gpx/pieterpad.gpx', {
+    async: true,
+    marker_options: {
+        startIconUrl: false,
+        endIconUrl: false,
+        shadowUrl: false
+    }
+}).on('loaded', function (e) {
+    console.log('loaded: ', e);
+    map.fitBounds(e.target.getBounds());
+}).addTo(map);
 
 // ----- IMGs -----
 
