@@ -1,0 +1,13 @@
+#mymap { 
+    height: 800px;
+    width: 800px;
+}
+
+img.popup {
+    height: 250px;
+}
+
+.leaflet-popup-content img {
+    height: 250px;
+    width: 250px;
+}
