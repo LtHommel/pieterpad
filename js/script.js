@@ -60,6 +60,20 @@ new L.GPX('assets/gpx/pieterpad.gpx', {
     map.fitBounds(e.target.getBounds());
 }).addTo(map);
 
+new L.GPX('assets/gpx/snurk.gpx', {
+  async: true,
+  marker_options: {
+      startIconUrl: false,
+      endIconUrl: false,
+      wptIconUrls: {'': 'assets/imgs/icons8-sleeping-in-bed-48.png'},
+      shadowUrl: false
+  }
+}).on('loaded', function (e) {
+  console.log('loaded: ', e);
+  map.fitBounds(e.target.getBounds());
+}).addTo(map);
+
+
 
 // ----- IMGs -----
 
