@@ -64,7 +64,7 @@ var photoIcon = L.icon({
 
 
 photos.forEach(photo  => {
-L.marker([photo.lat, photo.long], {icon: photoIcon})
+L.marker([photo.GPSLatitude, photo.GPSLongitude], {icon: photoIcon})
     .addTo(map)
-    .bindPopup(`<img class=\"popup\" src=${photo.url} />`);
+    .bindPopup(`<img class=\"popup\" src="./assets/imgs/photos/${photo.SourceFile}" />`);
 });
