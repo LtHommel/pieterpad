@@ -14,11 +14,7 @@ body {
   width: 60%;
 }
 
-img.popup {
-  height: 250px;
-}
-
 .leaflet-popup-content img {
-  height: 250px;
-  width: 250px;
+  max-height: 250px;
+  max-width: 250px;
 }

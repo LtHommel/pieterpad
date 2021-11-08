@@ -62,9 +62,20 @@ var photoIcon = L.icon({
   popupAnchor:  [0, -4] // point from which the popup should open relative to the iconAnchor
 });
 
-
 photos.forEach(photo  => {
 L.marker([photo.GPSLatitude, photo.GPSLongitude], {icon: photoIcon})
-    .addTo(map)
-    .bindPopup(`<img class=\"popup\" src="./assets/imgs/photos/${photo.SourceFile}" />`);
+  .addTo(map)
+  .bindPopup(`<img class=\"popup\" src="./assets/imgs/photos/${photo.SourceFile}" />`);
 });
+
+document.querySelector('.leaflet-popup-pane').addEventListener(
+  'load', (event) => {
+    var popup = map._popup;
+    // handmatig updaten van de updated flag is nodig om een oneindige loop te voorkomen. 
+    // zie https://stackoverflow.com/questions/51732698/leaflet-popup-update-resizing-solution-recreating-a-popup-everytime-unable
+    if (event.target.tagName === 'IMG' && popup && !popup._updated) {
+      popup._updated = true; 
+      popup.update();
+    }
+  }, true
+);
