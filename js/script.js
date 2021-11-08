@@ -1,5 +1,6 @@
-var map = new L.map('map')
-    .setView([52.11313000414521, 6.245880005881190], 8);
+var map = new L.map('map', {
+  maxZoom: 13
+}).setView([52.11313000414521, 6.245880005881190], 8);
 
 L.tileLayer.provider('Stamen.Terrain').addTo(map);
 
@@ -62,10 +63,13 @@ var photoIcon = L.icon({
   popupAnchor:  [0, -4] // point from which the popup should open relative to the iconAnchor
 });
 
+var markers = L.markerClusterGroup({
+  maxClusterRadius: 40,
+});
+
 photos.forEach(photo  => {
-L.marker([photo.GPSLatitude, photo.GPSLongitude], {icon: photoIcon})
-  .addTo(map)
-  .bindPopup(`<img class=\"popup\" src="./assets/imgs/photos/${photo.SourceFile}" />`);
+  markers.addLayer(L.marker([photo.GPSLatitude, photo.GPSLongitude], {icon: photoIcon})
+  .bindPopup(`<img class=\"popup\" src="./assets/imgs/photos/${photo.SourceFile}" />`));
 });
 
 document.querySelector('.leaflet-popup-pane').addEventListener(
@@ -79,3 +83,5 @@ document.querySelector('.leaflet-popup-pane').addEventListener(
     }
   }, true
 );
+
+map.addLayer(markers);
