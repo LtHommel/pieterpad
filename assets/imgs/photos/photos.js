@@ -341,12 +341,6 @@ const photos = [{
   "ImageSize": "2316 2316"
 },
 {
-  "SourceFile": "./IMG_2551.jpg",
-  "GPSLatitude": 53.0697305555556,
-  "GPSLongitude": 6.65794166666667,
-  "ImageSize": "4032 3024"
-},
-{
   "SourceFile": "./IMG_2550.jpg",
   "GPSLatitude": 53.0697305555556,
   "GPSLongitude": 6.65794166666667,
