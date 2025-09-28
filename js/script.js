@@ -2,10 +2,17 @@ var map = new L.map('map', {
   maxZoom: 13
 }).setView([52.11313000414521, 6.245880005881190], 8);
 
-L.tileLayer.provider('Stamen.Terrain').addTo(map);
+// ------ tiles ------
+var Stadia_StamenTerrain = L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}{r}.{ext}', {
+    minZoom: 0,
+    maxZoom: 18,
+    attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    ext: 'png'
+});
+
+Stadia_StamenTerrain.addTo(map);
 
 // ------ gpx ------
-
 const gpxs = [
     'assets/gpx/track/01_pieterburen_groningen.gpx',
     'assets/gpx/track/02_groningen_zeegse.gpx',
@@ -51,7 +58,6 @@ gpxs.forEach((gpx, i) => {
 });
 
 // ----- IMGs -----
-
 var photoIcon = L.icon({
   iconUrl: 'assets/imgs/icons8-camera-48.png',
   shadowUrl: false,
