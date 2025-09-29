@@ -11,7 +11,7 @@ body {
 
 #map {
   height: 100%;
-  width: 60%;
+  width: 100%;
 }
 
 .leaflet-popup-content img {
