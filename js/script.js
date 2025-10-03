@@ -21,10 +21,10 @@ const gpxs = [
 
 new L.GPX('assets/gpx/pieterpad.gpx', {
     async: true,
-    marker_options: {
-        startIconUrl: false,
-        endIconUrl: false,
-        shadowUrl: false
+    markers: {
+        startIconUrl: true,
+        endIconUrl: true,
+        shadowUrl: true
     },
     polyline_options: {
       color: 'blue',
@@ -42,10 +42,9 @@ gpxs.forEach((gpx, i) => {
 
   new L.GPX(gpx, {
     async: true,
-    marker_options: {
-      startIconUrl: false,
-      endIconUrl: false,
-      shadowUrl: false,
+    markers: {
+      startIcon: null,
+      endIcon: null
     },
     polyline_options: {
       color: color,
